@@ -1,0 +1,35 @@
+\section{はじめに}
+
+インタプリタ: 他のプログラムを入力として受け取って何かしらを出力するプログラム
+
+Brainfuck: 8つの命令だけから構成されるプログラミング言語
+
+精巧なインタプリタ: 最適化されていて，構文解析と評価において高度な技術を採用している
+
+JIT(Just In Time)インタプリタ: 入力を都度ネイティブの機械語に翻訳し実行する
+
+tree-walking型インタプリタ: ソースコードを構文解析し，抽象構文木(Abstract Syntax Tree: AST)を構築し，この木を評価する
+
+\begin{itemize}
+  \item 字句解析器
+  \item 構文解析器
+  \item 木表現
+  \item 評価器
+\end{itemize}
+
+\subsection{Monkeyプログラミング言語とインタプリタ}
+
+Monkey言語の特徴
+
+\begin{itemize}
+  \item C言語風の構文
+  \item 変数束縛
+  \item 整数と真偽値
+  \item 算術式
+  \item 組み込み関数
+  \item 第一級の高階関数
+  \item クロージャ
+  \item 文字列データ型
+  \item 配列データ型
+  \item ハッシュデータ型
+\end{itemize}

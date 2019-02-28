@@ -1,0 +1,51 @@
+\documentclass[10pt]{jsarticle}
+
+\newcommand{\ifdraft}{false}
+% \renewcommand{\baselinestretch}{1.1}
+
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{enumerate}
+\usepackage[top=15truemm,bottom=15truemm,left=20truemm,right=20truemm]{geometry}
+\usepackage{amssymb}
+\usepackage{here}
+\usepackage{amsbsy}
+\usepackage{listings,sty/jlisting}
+
+\lstset{
+  basicstyle={\ttfamily},
+  identifierstyle={\small},
+  commentstyle={\smallitshape},
+  keywordstyle={\small\bfseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},
+  numbers=left,
+  xrightmargin=0zw,
+  xleftmargin=3zw,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1zw,
+  lineskip=-0.5ex
+}
+
+% \setcounter{tocdepth}{3}
+
+\begin{document}
+
+% \tableofcontents
+
+\include{chap0}
+% \newpage
+% \include{chap1}
+% \newpage
+% \include{chap2}
+% \newpage
+% \include{chap3}
+% \newpage
+% \include{chap4}
+% \newpage
+% \include{chap5}
+
+\end{document}
