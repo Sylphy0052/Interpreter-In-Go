@@ -33,3 +33,74 @@ Monkey言語の特徴
   \item 配列データ型
   \item ハッシュデータ型
 \end{itemize}
+
+\begin{lstlisting}[caption=Monkeyで名前を値に束縛]
+let age = 1;
+let name = "monkey";
+let result = 10 * (20 / 2);
+\end{lstlisting}
+
+\begin{lstlisting}[caption=整数の配列とハッシュに名前を束縛]
+let myArray = [1, 2, 3, 4, 5];
+let thorsten = {"name": "Thorsten", "age": 28}
+
+myArray[0] // => 1
+thorsten["name"] // => "Thorsten"
+\end{lstlisting}
+
+\begin{lstlisting}[caption=関数に名前を束縛]
+let add = fn(a, b) { return a + b; };
+let add = fn(a, b) { a + b; }; // returnを省略
+add(1, 2);
+\end{lstlisting}
+
+\begin{lstlisting}[caption=フィボナッチ数]
+let fibonacci = fn(x) {
+  if (x == 0) {
+    0
+  } else {
+    if (x == 1) {
+      1
+    } else {
+      fibonacci(x - 1) + fibonacci(x - 2);
+    }
+  }
+};
+\end{lstlisting}
+
+\begin{lstlisting}[caption=高階関数, label=first-class_function]
+let twice = fn(f, x) {
+  return f(f(x));
+}
+
+let addTwo = fn(x) {
+  return x + 2;
+}
+
+twice(addTwo, 2); // => 6
+\end{lstlisting}
+
+第一級関数: 関数を関数呼び出しの引数として使うことができる(ソースコード\ref{first-class_function})
+
+REPL(Read(読み込み)/Evaluate(評価)/Print(表示)/Loop(繰り返し): 対話的実行環境)でMonkeyのソースコードをトークナイズし，構文解析し，抽象構文木と呼ばれるコードの内部表現を生成し，それからその木を評価する．
+
+インタプリタに必要な機能
+
+\begin{itemize}
+  \item 字句解析器
+  \item 構文解析器
+  \item 抽象構文木(AST)
+  \item 内部オブジェクトシステム
+  \item 評価器
+\end{itemize}
+
+\subsection{どうしてGoか？}
+
+Go言語は読むのが簡単で理解しやすい．
+
+ツール
+\begin{itemize}
+  \item gofmt: Goの統一されたコーディングスタイル
+  \item 組み込みのテスティングフレームワーク
+  \item 他の言語でもほとんど同じように書ける
+\end{itemize}
